@@ -11,26 +11,25 @@ function doReads(client) {
   setTimeout(readFromSecondaryfunc, 1000, client);
   setTimeout(readFromNearestfunc, 1000, client);
   setTimeout(readFromRegionfunc, 1000, client, readFromRegion);
+}
 
-  }
+function readDefaultfunc(client) {
+  var query = {};
+  var readcoll = client.db('regionDB').collection('regionTest');
+  readcoll.find(query).toArray(function(err, data) {
+    assert.equal(null, err);
+    console.log("readDefaultfunc query completed!");
+  });
+}
 
-  function readDefaultfunc(client) {
-    var query = {};
-    var readcoll = client.db('regionDB').collection('regionTest');
-    readcoll.find(query).toArray(function(err, data) {
-      assert.equal(null, err);
-      console.log("readDefaultfunc query completed!");
-    });
-  }
-
-  function readFromSecondaryfunc(client) {
-    var query = {};
-    var readcoll = client.db('regionDB').collection('regionTest', {readPreference: ReadPreference.SECONDARY});
-    readcoll.find(query).toArray(function(err, data) {
-      assert.equal(null, err);
-      console.log("readFromSecondaryfunc query completed!");
-    });
-  }
+function readFromSecondaryfunc(client) {
+  var query = {};
+  var readcoll = client.db('regionDB').collection('regionTest', {readPreference: ReadPreference.SECONDARY});
+  readcoll.find(query).toArray(function(err, data) {
+    assert.equal(null, err);
+    console.log("readFromSecondaryfunc query completed!");
+  });
+}
 
 function readFromNearestfunc(client) {
   var query = {};
