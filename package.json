@@ -1,0 +1,15 @@
+{
+  "name": "azure-cosmos-db-mongodb-node-geo-readpreference",
+  "version": "1.0.0",
+  "description": "This sample shows you how to use MongoDB ReadPreference against Azure Cosmos DB with MongoDB API using native NodeJS mongo driver. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "2.2.27",
+    "mongodb-core": "2.1.11"
+  }
+}
