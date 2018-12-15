@@ -1,4 +1,4 @@
-# Contributing to Using Mongo ReadPreference with Azure Cosmos DB's MongoDB API
+# Contributing to using ReadPreference command with Azure Cosmos DB for MongoDB API
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
