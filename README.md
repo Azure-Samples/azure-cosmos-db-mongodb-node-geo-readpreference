@@ -1,7 +1,11 @@
 ---
-services: cosmos-db
-platforms: node
-author: viviswan
+page_type: sample
+languages:
+- javascript
+products:
+- azure
+description: "Azure Cosmos DB is a fully managed globally distributed, multi-model database service, transparently replicating your data across any number of Azure regions."
+urlFragment: azure-cosmos-db-mongodb-node-geo-readpreference
 ---
 
 # Using ReadPreference command with Azure Cosmos DB for MongoDB API
